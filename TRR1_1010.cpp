@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-bool checkp(double a, double b, double c)
+bool checkptb2(double a, double b, double c)
 {
     if (a == 0)
     {
@@ -66,6 +66,6 @@ int main()
     cin.tie(NULL);
     double a, b, c;
     cin >> a >> b >> c;
-    cout << checkp(a, b, c) << endl;
+    cout << checkptb2(a, b, c) << endl;
     return 0;
 }
