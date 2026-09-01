@@ -9,23 +9,23 @@ bool checkptb4(double a, double b, double c)
         {
             if (c == 0)
             {
-                return true;
+                return 1;
             }
-            return false;
+            return 0;
         }
         else
         {
             if (c == 0)
             {
-                return true;
+                return 1;
             }
             else
             {
                 if (-c / b > 0)
                 {
-                    return true;
+                    return 1;
                 }
-                return false;
+                return 0;
             }
         }
     }
@@ -35,15 +35,15 @@ bool checkptb4(double a, double b, double c)
         {
             if (a * c < 0)
             {
-                return true;
+                return 1;
             }
-            return false;
+            return 0;
         }
         else
         {
             if (c == 0)
             {
-                return true;
+                return 1;
             }
             else
             {
@@ -54,28 +54,28 @@ bool checkptb4(double a, double b, double c)
                 {
                     if (P < 0)
                     {
-                        return true;
+                        return 1;
                     }
                     else
                     {
                         if (S > 0)
                         {
-                            return true;
+                            return 1;
                         }
-                        return false;
+                        return 0;
                     }
                 }
                 else if (delta == 0)
                 {
                     if (S > 0)
                     {
-                        return true;
+                        return 1;
                     }
-                    return false;
+                    return 0;
                 }
                 else
                 {
-                    return false;
+                    return 0;
                 }
             }
         }
@@ -87,13 +87,6 @@ int main()
     cin.tie(NULL);
     double a, b, c;
     cin >> a >> b >> c;
-    if (checkptb4(a, b, c))
-    {
-        cout << 1 << endl;
-    }
-    else
-    {
-        cout << 0 << endl;
-    }
+    cout << checkptb4(a, b, c) << endl;
     return 0;
 }
