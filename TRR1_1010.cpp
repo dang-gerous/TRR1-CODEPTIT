@@ -9,17 +9,17 @@ bool checkp(double a, double b, double c)
         {
             if (c == 0)
             {
-                return true;
+                return 1;
             }
-            return false;
+            return 0;
         }
         else
         {
             if (-c / b > 0)
             {
-                return true;
+                return 1;
             }
-            return false;
+            return 0;
         }
     }
     else
@@ -31,17 +31,17 @@ bool checkp(double a, double b, double c)
         {
             if (P < 0)
             {
-                return true;
+                return 1;
             }
             else
             {
                 if (S > 0)
                 {
-                    return true;
+                    return 1;
                 }
                 else
                 {
-                    return false;
+                    return 0;
                 }
             }
         }
@@ -49,13 +49,13 @@ bool checkp(double a, double b, double c)
         {
             if (S > 0)
             {
-                return true;
+                return 1;
             }
-            return false;
+            return 0;
         }
         else
         {
-            return false;
+            return 0;
         }
     }
 }
@@ -66,13 +66,6 @@ int main()
     cin.tie(NULL);
     double a, b, c;
     cin >> a >> b >> c;
-    if (checkp(a, b, c))
-    {
-        cout << 1 << endl;
-    }
-    else
-    {
-        cout << 0 << endl;
-    }
+    cout << checkp(a, b, c) << endl;
     return 0;
 }
